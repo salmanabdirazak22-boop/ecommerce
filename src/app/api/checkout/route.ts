@@ -3,6 +3,8 @@ import { stripe } from '@/lib/stripe';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
   const session = await auth();
   if (!session) {

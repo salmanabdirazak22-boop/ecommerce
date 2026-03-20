@@ -22,10 +22,14 @@ export async function PUT(req: Request) {
     const body = await req.json();
     const data = UpdateProductSchema.parse(body);
     const { id, ...updateData } = data;
+    const { image, ...restData } = updateData;
 
     const updatedProduct = await prisma.product.update({
       where: { id },
-      data: updateData,
+      data: {
+        ...restData,
+        images: image ? [image] : undefined,
+      },
     });
 
     return NextResponse.json(updatedProduct);

@@ -1,0 +1,150 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.continueBtn {
+  margin-top: 1.5rem;
+}
+
+.itemsList {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.itemImageContainer {
+  width: 70px;
+  height: 90px;
+  margin-right: 1rem;
+  background-color: var(--color-border);
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+.itemDetails {
+  flex: 1;
+}
+
+.itemName {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.itemPrice {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.quantityControls {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.quantityControls button {
+  padding: 0.25rem 0.5rem;
+  background: var(--color-bg);
+  transition: background-color 0.2s;
+}
+
+.quantityControls button:hover {
+  background: var(--color-border);
+}
+
+.quantityControls span {
+  padding: 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.removeBtn:hover {
+  color: #ff4d4f;
+}
+
+.cartFooter {
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-border);
+}
+
+.upsell {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upsellBtn {
+  background: var(--color-primary);
+  color: var(--color-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  border: 1px solid var(--color-primary);
+}
+
+.summaryContainer {
+  margin-bottom: 1.5rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.totalRow {
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.checkoutBtn {
+  padding: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}

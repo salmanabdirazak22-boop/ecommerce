@@ -1,0 +1,103 @@
+.loginPage {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg);
+}
+
+.loginContainer {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.loginCard {
+  padding: 3rem;
+  text-align: center;
+}
+
+.loginCard h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.loginCard p {
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  text-align: left;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.remember input {
+  accent-color: var(--color-primary);
+}
+
+.forgot {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.submitBtn {
+  height: 3.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+}

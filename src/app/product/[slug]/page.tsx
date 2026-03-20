@@ -3,9 +3,12 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button/Button';
 import { useCart } from '@/context/CartContext';
+import { useSession } from 'next-auth/react';
+import ProductReviews from '@/components/product/ProductReviews';
 import styles from './page.module.css';
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
+  const { data: session } = useSession();
   const { addItem } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState<'details' | 'shipping' | 'reviews'>('details');
@@ -106,7 +109,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <div className={styles.tabContent}>
               {activeTab === 'details' && <p>Detailed specifications would go here. Material compositions, dimensions, and care instructions.</p>}
               {activeTab === 'shipping' && <p>Free standard shipping on all orders. Express options available at checkout. Dispatches within 24 hours.</p>}
-              {activeTab === 'reviews' && <p>★★★★★ (4.8 based on 124 reviews)<br/><br/>"Absolutely transformative product. Could not recommend more highly." - Sarah T.</p>}
+              {activeTab === 'reviews' && <ProductReviews productId={product.id} />}
             </div>
           </div>
 

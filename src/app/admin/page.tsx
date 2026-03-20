@@ -107,10 +107,10 @@ export default function AdminPage() {
                       {editingId === p.id ? (
                         <div className={styles.actions}>
                           <Button size="small" onClick={handleUpdate}>Save</Button>
-                          <Button size="small" variant="ghost" onClick={() => setEditingId(null)}>Cancel</Button>
+                          <Button size="small" variant="secondary" onClick={() => setEditingId(null)}>Cancel</Button>
                         </div>
                       ) : (
-                        <Button size="small" variant="outline" onClick={() => handleEdit(p)}>Edit</Button>
+                        <Button size="small" variant="accent" onClick={() => handleEdit(p)}>Edit</Button>
                       )}
                     </td>
                   </tr>

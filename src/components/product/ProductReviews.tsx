@@ -123,7 +123,7 @@ export default function ProductReviews({ productId }: { productId: string }) {
               />
             </div>
             <div className={styles.formActions}>
-              <Button type="button" variant="ghost" onClick={() => setShowForm(false)}>Cancel</Button>
+              <Button type="button" variant="secondary" onClick={() => setShowForm(false)}>Cancel</Button>
               <Button type="submit" disabled={submitting}>
                 {submitting ? 'Submitting...' : 'Submit Review'}
               </Button>

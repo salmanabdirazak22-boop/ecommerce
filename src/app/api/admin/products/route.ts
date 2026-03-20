@@ -9,7 +9,7 @@ const UpdateProductSchema = z.object({
   price: z.number().optional(),
   inventory: z.number().nonnegative().optional(),
   image: z.string().optional(),
-  category: z.string().optional(),
+  categoryId: z.string().optional(),
 });
 
 export async function PUT(req: Request) {
